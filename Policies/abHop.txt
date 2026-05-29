@@ -1,0 +1,11 @@
+1. Data Collection
+We collect limited user data necessary for game functionality.
+
+2. Usage
+Data is used to improve gameplay experience and performance.
+
+3. Third Parties
+We do not sell personal data to third parties.
+
+4. Security
+We implement reasonable security measures to protect data.
