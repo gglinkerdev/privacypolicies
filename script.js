@@ -1,7 +1,7 @@
 const products = [
   {
     name: "abHop",
-    file: "abHop.txt",
+    file: "abHop.html",
     updated: "2026-06-10"
   }
 ];
