@@ -23,7 +23,7 @@ function loadPolicy(product, el) {
   welcome.classList.add("hidden");
   viewer.classList.remove("hidden");
 
-  frame.src = product.file;
+  frame.src = "Policies/" + product.file;
 }
 
 function render(filter = "") {
