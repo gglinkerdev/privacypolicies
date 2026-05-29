@@ -3,47 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GGLinker Dev - Privacy Center</title>
+  <title>Namme Privacy Center</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <header class="topbar">
-    <div class="brand">
-      <h1>GGLinker Dev</h1>
-      <span>Privacy Center</span>
-    </div>
-  </header>
-
-  <div class="container">
-
-    <aside class="sidebar">
-      <input id="search" type="text" placeholder="Search products..." />
-      <div id="productList" class="product-list"></div>
-    </aside>
-
-    <main class="content">
-      <div id="welcome" class="welcome">
-        <h2>Privacy Policies</h2>
-        <p>
-          This Privacy Center contains official privacy policies for all GGLinker Dev products.
-          Select a product from the left panel to view its policy.
-        </p>
-      </div>
-
-      <div id="policyView" class="policy hidden">
-        <h2 id="policyTitle"></h2>
-        <p class="meta">Last updated: <span id="policyDate"></span></p>
-        <div id="policyText"></div>
-      </div>
-    </main>
-
+<header class="topbar">
+  <div class="brand">
+    <h1>Namme</h1>
+    <span>Privacy Center</span>
   </div>
+</header>
 
-  <footer>
-    <p>© <span id="year"></span> GGLinker Dev. All rights reserved.</p>
-  </footer>
+<div class="container">
 
-  <script src="script.js"></script>
+  <aside class="sidebar">
+    <input id="search" type="text" placeholder="Search products..." />
+    <div id="productList"></div>
+  </aside>
+
+  <main class="content">
+
+    <div id="welcome" class="welcome">
+      <h2>Privacy Policies</h2>
+      <p>Select a product to view its privacy policy.</p>
+    </div>
+
+    <div id="viewer" class="viewer hidden">
+      <iframe id="policyFrame"></iframe>
+    </div>
+
+  </main>
+
+</div>
+
+<footer>
+  <p>© <span id="year"></span> Namme</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

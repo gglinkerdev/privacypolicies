@@ -9,39 +9,30 @@ const products = [
 const list = document.getElementById("productList");
 const search = document.getElementById("search");
 
-const title = document.getElementById("policyTitle");
-const date = document.getElementById("policyDate");
-const text = document.getElementById("policyText");
-
+const viewer = document.getElementById("viewer");
+const frame = document.getElementById("policyFrame");
 const welcome = document.getElementById("welcome");
-const policyView = document.getElementById("policyView");
 
-async function loadPolicy(product, element) {
-  try {
-    const res = await fetch(`Policies/${product.file}`);
-    const data = await res.text();
+function loadPolicy(product, el) {
 
-    welcome.classList.add("hidden");
-    policyView.classList.remove("hidden");
+  document.querySelectorAll(".product")
+    .forEach(p => p.classList.remove("active"));
 
-    title.textContent = product.name;
-    date.textContent = product.updated;
-    text.textContent = data;
+  el.classList.add("active");
 
-    document.querySelectorAll(".product").forEach(el => el.classList.remove("active"));
-    element.classList.add("active");
+  welcome.classList.add("hidden");
+  viewer.classList.remove("hidden");
 
-  } catch (err) {
-    text.textContent = "Failed to load policy file.";
-  }
+  frame.src = product.file;
 }
 
-function renderProducts(filter = "") {
+function render(filter = "") {
   list.innerHTML = "";
 
   products
     .filter(p => p.name.toLowerCase().includes(filter.toLowerCase()))
-    .forEach((p) => {
+    .forEach(p => {
+
       const div = document.createElement("div");
       div.className = "product";
       div.textContent = p.name;
@@ -52,10 +43,8 @@ function renderProducts(filter = "") {
     });
 }
 
-search.addEventListener("input", (e) => {
-  renderProducts(e.target.value);
-});
+search.addEventListener("input", e => render(e.target.value));
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-renderProducts();
+render();
