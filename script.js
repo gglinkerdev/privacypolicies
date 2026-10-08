@@ -3,6 +3,11 @@ const products = [
     name: "abHop",
     file: "abHop.html",
     updated: "2026-06-10"
+  },
+  {
+    name: "CombiNation",
+    file: "CombiNation.html",
+    updated: "2026-10-07"
   }
 ];
 
